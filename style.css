@@ -5,12 +5,18 @@
 }
 
 a{
-  color: #3c96ed;
+  color: var(--button-primary);
   text-decoration: none;
 }
 
 body{
-  background: #FAFAFA;
+  --background: #FAFAFA;
+  --white: #fff;
+  --black: #000;
+  --button-primary: #0095f6;
+  --border-primary: #e6e6e6;
+
+  background: var(--background);
   height: 100%;
   width: 100%;
   margin:0;
@@ -56,8 +62,8 @@ body{
 }
 
 .login-panel {
-  background-color: white;
-  border: 1px solid #e6e6e6;
+  background-color: var(--white);
+  border: 1px solid var(--border-primary);
   text-align: center;
   padding: 20px 0;
 }
@@ -74,8 +80,8 @@ form{
 }
 
 input[type="password"], input[type="text"] {
-  background-color: #fff;
-  border: 1px solid rgb(236,234, 234);
+  background-color: var(--white);
+  border: 1px solid var(--border-primary);
   height: 40px;
   border-radius: 4px;
   margin-top: 10px;
@@ -91,7 +97,7 @@ input[type="password"]::placeholder, input[type="text"]::placeholder {
 
 input[type="password"]:focus, input[type="text"]:focus {
   outline: 0;
-  border: 1px solid #a1a1a1;
+  border: 1px solid var(--border-primary);
 }
 
 input[type="submit"] {
@@ -101,7 +107,7 @@ input[type="submit"] {
   border: 0;
   background-color: #3c96ed;
   border-radius: 4px;
-  color: #fff;
+  color: var(--white);
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -110,9 +116,9 @@ input[type="submit"] {
 }
 
 .infobox{
-  background-color: #FFF;
+  background-color: var(--white);
   height: 60px;
-  border: 1px solid rgb(236, 234, 234);
+  border: 1px solid var(--border-primary);
   margin: 10px auto 0; 
 
   display: flex;
@@ -150,7 +156,7 @@ footer {
 }
 
 footer a {
-  color: #000;
+  color: var(--black);
   text-transform: uppercase;
   font-weight: bold;
   margin-right: 8px;
@@ -191,8 +197,8 @@ footer a {
   width: 320px;
   margin: 10px 0;
   height: 35px;
-  background-color: #0095f6;
-  color: #fff;
+  background-color: var(--button-primary);
+  color: var(--white);
   border: 0;
   border-radius: 4px;
   font-size: 15px;
@@ -209,7 +215,7 @@ footer a {
 
 .line {
   height: 1px;
-  background-color: #e6e6e6;
+  background-color: var(--border-primary);
   width: 35%;
 }
 
@@ -236,6 +242,7 @@ footer a {
   .right {
     padding-left: 0;
   }
+
 }
 
 @media (max-width: 560px) {
@@ -260,4 +267,6 @@ footer a {
   .message {
     margin: 10px 25px;
   }
+
+ 
 }
